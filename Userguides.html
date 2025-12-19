@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SecureVote – User Guides</title>
+
+<style>
+:root{
+  --bg:#f5f7fb;
+  --sidebar:#ffffff;
+  --card:#ffffff;
+  --border:#e5e7eb;
+  --text:#1e293b;
+  --muted:#64748b;
+  --accent:#4f46e5;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:Inter, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  height:100vh;
+}
+
+/* ───────── Sidebar ───────── */
+.sidebar{
+  width:260px;
+  background:var(--sidebar);
+  border-right:1px solid var(--border);
+  padding:20px;
+  overflow-y:auto;
+}
+
+.sidebar h2{
+  font-size:16px;
+  margin-bottom:12px;
+}
+
+.sidebar-section{
+  margin-bottom:12px;
+}
+
+.sidebar-title{
+  padding:10px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  color:var(--muted);
+  font-weight:500;
+}
+
+.sidebar-title.active,
+.sidebar-title:hover{
+  background:rgba(79,70,229,.1);
+  color:var(--accent);
+  font-weight:600;
+}
+
+.sidebar-items{
+  padding-left:16px;
+  margin-top:6px;
+}
+
+.sidebar-item{
+  font-size:13px;
+  color:var(--muted);
+  padding:4px 0;
+}
+
+/* ───────── Main ───────── */
+.main{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.header{
+  padding:16px 24px;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  font-weight:600;
+}
+
+/* ───────── Content ───────── */
+.content{
+  padding:24px;
+  overflow-y:auto;
+}
+
+/* ───────── Sections ───────── */
+.section{
+  display:none;
+}
+
+.section.active{
+  display:block;
+}
+
+.section h3{
+  margin:0 0 16px 0;
+  font-size:18px;
+}
+
+/* Fixed 3-column grid */
+.guides{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+
+/* ───────── Cards ───────── */
+.guide-card{
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+
+.guide-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 16px;
+  border-bottom:1px solid var(--border);
+  background:#f9fafb;
+}
+
+.guide-title{
+  font-weight:600;
+  font-size:14px;
+}
+
+.fullscreen-btn{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  background:#fff;
+  cursor:pointer;
+}
+
+.fullscreen-btn:hover{
+  background:rgba(79,70,229,.08);
+}
+
+iframe{
+  width:100%;
+  height:420px;
+  border:0;
+}
+
+/* Fullscreen */
+.guide-card:fullscreen iframe{
+  height:100vh;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .guides{grid-template-columns:1fr;}
+  .sidebar{display:none;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ───────── Sidebar ───────── -->
+<aside class="sidebar">
+  <h2>User Guides</h2>
+
+  <div class="sidebar-section">
+    <div class="sidebar-title active" data-target="all">All</div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-title" data-target="login">Login & Access</div>
+    <div class="sidebar-items">
+      <div class="sidebar-item">How to Log In</div>
+      <div class="sidebar-item">Resetting Password</div>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-title" data-target="dashboard">Dashboard</div>
+    <div class="sidebar-items">
+      <div class="sidebar-item">Admin Overview</div>
+      <div class="sidebar-item">Viewing Reports</div>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-title" data-target="users">User Management</div>
+    <div class="sidebar-items">
+      <div class="sidebar-item">Managing Users</div>
+      <div class="sidebar-item">Assigning Permissions</div>
+    </div>
+  </div>
+</aside>
+
+<!-- ───────── Main ───────── -->
+<section class="main">
+  <div class="header">SecureVote User Guides</div>
+
+  <div class="content">
+
+    <!-- ALL -->
+    <div class="section active" data-section="all">
+      <h3>All User Guides</h3>
+      <div class="guides">
+        <!-- Login -->
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">How to Log In</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Resetting Password</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <!-- Dashboard -->
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Admin Dashboard Overview</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Viewing Reports</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <!-- Users -->
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Managing Users</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Assigning Permissions</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+      </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="section" data-section="login">
+      <h3>Login & Access</h3>
+      <div class="guides">
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">How to Log In</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Resetting Password</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="section" data-section="dashboard">
+      <h3>Dashboard</h3>
+      <div class="guides">
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Admin Dashboard Overview</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Viewing Reports</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+      </div>
+    </div>
+
+    <!-- USERS -->
+    <div class="section" data-section="users">
+      <h3>User Management</h3>
+      <div class="guides">
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Managing Users</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+        <div class="guide-card"><div class="guide-header"><div class="guide-title">Assigning Permissions</div><button class="fullscreen-btn">Full Screen</button></div><iframe src="https://scribehow.com/embed/How_to_Log_In_to_the_SecureVote_Admin_Portal__coqedn7FTqi78LEjeN0b1Q?as=video" allow="fullscreen"></iframe></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+/* Sidebar navigation */
+document.querySelectorAll(".sidebar-title").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".sidebar-title").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const target = btn.dataset.target;
+    document.querySelectorAll(".section").forEach(sec=>{
+      sec.classList.toggle("active", sec.dataset.section === target);
+    });
+  });
+});
+
+/* Per-video fullscreen */
+document.querySelectorAll(".fullscreen-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const card = btn.closest(".guide-card");
+    if(!document.fullscreenElement){
+      card.requestFullscreen();
+      btn.textContent="Exit Full Screen";
+    } else {
+      document.exitFullscreen();
+    }
+  });
+});
+
+document.addEventListener("fullscreenchange",()=>{
+  if(!document.fullscreenElement){
+    document.querySelectorAll(".fullscreen-btn")
+      .forEach(b=>b.textContent="Full Screen");
+  }
+});
+</script>
+
+</body>
+</html>
